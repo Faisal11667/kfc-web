@@ -1,0 +1,1192 @@
+/* General Body & Reset Styles */
+body {
+    font-family: 'Arial', sans-serif; /* You can replace with Google Fonts later */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    background-color: #f7f7f7; /* Light background for the page */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* A universal box-sizing rule for consistency */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Container for consistent width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add some padding on smaller screens */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.2em; text-align: center; margin-bottom: 40px;}
+h3 { font-size: 1.6em; }
+
+/* Links */
+a {
+    color: #e4002b; /* KFC Red */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #b70024; /* Darker KFC Red on hover */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #e4002b; /* KFC Red */
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #b70024; /* Darker KFC Red */
+}
+
+.btn-secondary {
+    background-color: #ffc200; /* KFC Yellow */
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e6b000; /* Darker KFC Yellow */
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #e4002b;
+    border: 2px solid #e4002b;
+}
+
+.btn-outline:hover {
+    background-color: #e4002b;
+    color: #fff;
+}
+
+.btn-add-to-cart {
+    background-color: #28a745; /* Green for add to cart */
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* --- Header Styles --- */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+    display: block;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav ul li a:hover {
+    color: #e4002b;
+}
+
+.main-nav ul li a.cart-icon {
+    font-size: 1.3em; /* Larger cart icon */
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    background-color: #e4002b;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 3px 7px;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: super;
+}
+
+
+/* --- Main Content Sections (General) --- */
+main section {
+    padding: 80px 0; /* Vertical spacing for sections */
+    text-align: center; /* Center content by default */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover; /* Placeholder for your hero background image */
+    color: #131212;
+    height: 500px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Adds shadow for text readability */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #131212; /* Ensure heading is white on dark background */
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* --- Deals Section --- */
+.deals-section {
+    background-color: #fcebeb; /* Light red/pink background */
+}
+
+.deals-container {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 30px; /* Space between cards */
+}
+
+.deal-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 300px; /* Fixed width for cards */
+    overflow: hidden; /* Ensures image corners are rounded */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.deal-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-bottom: 1px solid #eee;
+}
+
+.deal-card h3 {
+    color: #e4002b;
+    margin: 15px 15px 10px;
+}
+
+.deal-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 15px 20px;
+}
+
+.deal-card .btn-secondary {
+    display: block; /* Make button full width of card content area */
+    width: calc(100% - 30px); /* Account for padding */
+    margin: 0 15px 15px; /* Adjust margin */
+    padding: 10px;
+}
+
+/* --- Popular Items Section --- */
+.popular-items-section {
+    background-color: #fff;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    max-width: 90%; /* Adjust max-width if needed */
+    margin: 0 auto; /* Center the grid */
+}
+
+.item-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.item-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for item images */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.item-card h3 {
+    margin: 15px 15px 5px;
+    color: #333;
+}
+
+.item-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 15px 10px;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+.item-card .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #e4002b;
+    margin: 0 15px 15px;
+    display: block; /* Make price a block element for spacing */
+}
+
+.item-card .btn-add-to-cart {
+    width: calc(100% - 30px);
+    margin: 0 15px 15px;
+    display: block;
+}
+
+/* --- Newsletter Section (Naya CSS) --- */
+.newsletter-section {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.newsletter-section h2 {
+    color: #e4002b;
+    margin-bottom: 15px;
+}
+
+.newsletter-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* To keep button and input rounded corners together */
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1; /* Allows input to take up most space */
+    padding: 15px 20px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+.newsletter-form .btn-primary {
+    padding: 15px 30px;
+    border-radius: 0; /* Remove individual button border-radius */
+    font-size: 1em;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 60px; /* Adjust as needed */
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-social {
+    margin-bottom: 20px; /* Space out sections on smaller screens */
+}
+
+.footer-links h3, .footer-social h3 {
+    color: #ffc200; /* KFC Yellow for headings */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-social img {
+    height: 30px; /* Size of social icons */
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.copyright {
+    width: 100%;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* --- Responsive Design (Basic Media Queries) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    /* Deals & Popular Items */
+    .deals-container,
+    .items-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .deal-card,
+    .item-card {
+        width: 90%; /* Wider cards for mobile */
+        max-width: 350px; /* Max width to prevent them from being too wide */
+    }
+
+    /* Newsletter Form */
+    .newsletter-form {
+        flex-direction: column;
+        border: none; /* Remove border for stack layout */
+        max-width: 90%;
+    }
+    .newsletter-form input[type="email"],
+    .newsletter-form .btn-primary {
+        width: 100%;
+        border-radius: 8px; /* Apply border-radius to individual elements */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+    .newsletter-form .btn-primary {
+        margin-bottom: 0; /* No margin after the last element */
+    }
+
+    /* Footer */
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-links, .footer-social {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links ul li {
+        margin: 5px 15px;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+}
+
+
+
+
+
+
+
+/* --- Menu Page Styles --- */
+.menu-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/menu-hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.menu-hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+}
+
+.menu-sections {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* Category Navigation */
+.category-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.category-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #e4002b;
+    color: #fff;
+    border-color: #e4002b;
+}
+
+.category-btn.active {
+    background-color: #e4002b;
+    color: #fff;
+    border-color: #e4002b;
+}
+
+/* Search Bar */
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#menuSearch {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; /* Left side rounded */
+    font-size: 1em;
+    outline: none; /* Remove blue outline on focus */
+}
+
+#searchBtn {
+    background-color: #ffc200;
+    color: #333;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 0 5px 5px 0; /* Right side rounded */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #e6b000;
+}
+
+
+/* Menu Items Grid */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.menu-item-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure cards are same height in a row */
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.menu-item-card img {
+    width: 100%;
+    height: 200px; /* Consistent height for menu item images */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item-card h3 {
+    margin: 15px 15px 5px;
+    color: #333;
+}
+
+.menu-item-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 15px 10px;
+    flex-grow: 1; /* Description takes available space */
+}
+
+.menu-item-card .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #e4002b;
+    margin: 0 15px 15px;
+    display: block;
+}
+
+.menu-item-card .btn-add-to-cart {
+    width: calc(100% - 30px); /* Adjust for padding within card */
+    margin: 0 15px 15px;
+    display: block;
+    align-self: flex-end; /* Push button to the bottom */
+}
+
+/* Responsive adjustments for Menu Page */
+@media (max-width: 768px) {
+    .menu-hero h1 {
+        font-size: 2.5em;
+    }
+    .menu-hero p {
+        font-size: 1em;
+    }
+
+    .category-navigation {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+    }
+
+    .category-btn {
+        width: 80%; /* Make buttons wider on small screens */
+        max-width: 250px;
+    }
+
+    .search-bar-container {
+        flex-direction: column; /* Stack search input and button */
+        max-width: 90%;
+        margin: 0 auto 50px auto; /* Center and add bottom margin */
+    }
+    #menuSearch {
+        border-radius: 5px; /* Full rounded corners */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+    #searchBtn {
+        border-radius: 5px; /* Full rounded corners */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item-card {
+        width: 100%; /* Full width for single column layout on very small screens */
+    }
+}
+
+
+
+
+
+/* --- Deals Page Styles --- */
+
+
+
+
+
+
+.deals-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/deals-hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.deals-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.deals-hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+}
+
+.current-deals {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.current-deals h2 {
+    color: #e4002b; /* KFC Red for heading */
+    margin-bottom: 50px;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for deals */
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.deal-card-full {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex; /* Image and content side by side or stacked */
+    flex-direction: column; /* Stack vertically by default */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card-full:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.deal-card-full img {
+    width: 100%;
+    height: 250px; /* Consistent height for deal images */
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.deal-card-full .deal-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content to take up remaining space */
+}
+
+.deal-card-full h3 {
+    color: #e4002b;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.deal-card-full p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Description takes available space */
+}
+
+.deal-card-full .deal-price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #e4002b; /* KFC Red for the main price */
+    margin-bottom: 5px;
+}
+
+.deal-card-full .original-price {
+    font-size: 1.1em;
+    color: #999;
+    text-decoration: line-through; /* Strikethrough for original price */
+    margin-bottom: 15px;
+    display: block; /* Ensures it's on its own line */
+}
+
+.deal-card-full .deal-validity {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.deal-card-full .btn-add-deal {
+    display: block; /* Make button full width within card content */
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    margin-top: auto; /* Push button to the bottom */
+}
+
+/* Responsive adjustments for Deals Page */
+@media (max-width: 768px) {
+    .deals-hero h1 {
+        font-size: 2.5em;
+    }
+    .deals-hero p {
+        font-size: 1em;
+    }
+
+    .deals-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 0 15px;
+    }
+    .deal-card-full {
+        max-width: 450px; /* Limit width of single column cards */
+        margin: 0 auto; /* Center single cards */
+    }
+}
+
+
+
+
+/* --- About Us Page Styles --- */
+
+
+
+
+
+
+.about-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/about-hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color:black;
+}
+
+.about-hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+}
+
+.our-story {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.story-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 40px; /* Space between text and image */
+    align-items: center; /* Vertically align content */
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left; /* Align text within its column */
+}
+
+.story-text {
+    flex: 2; /* Takes up more space */
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.story-text h2 {
+    color: #e4002b;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-align: left; /* Override general h2 center alignment */
+}
+
+.story-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.story-image {
+    flex: 1; /* Takes less space */
+    min-width: 280px; /* Minimum width before wrapping */
+    text-align: center; /* Center image if it's smaller */
+}
+
+.story-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.our-values {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.our-values h2 {
+    color: #e4002b;
+    margin-bottom: 50px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.value-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.value-card p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* Responsive adjustments for About Us Page */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5em;
+    }
+    .about-hero p {
+        font-size: 1em;
+    }
+
+    .story-content {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center;
+    }
+
+    .story-text {
+        min-width: unset; /* Remove min-width to allow full width */
+        width: 100%;
+    }
+
+    .story-text h2 {
+        text-align: center; /* Center heading on small screens */
+    }
+
+    .story-image {
+        min-width: unset;
+        width: 90%; /* Adjust image width for smaller screens */
+        margin: 0 auto; /* Center image */
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr; /* Single column for values on smaller screens */
+        padding: 0 15px;
+    }
+}
+
+
+
+
+/* --- Contact Us Page Styles --- */
+
+
+
+
+.contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/contact-hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.contact-hero p {
+    font-size: 1.3em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: black;
+}
+
+.contact-details {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* For vertical alignment of content */
+    flex-direction: column;
+    justify-content: space-between; /* Push button to bottom if applicable */
+}
+
+.detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.detail-card h3 {
+    color: #e4002b;
+    margin-bottom: 15px;
+    font-size: 1.6em;
+}
+
+.detail-card p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.detail-card .phone-number {
+    font-size: 1.4em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.detail-card .btn-outline {
+    margin-top: auto; /* Push button to the bottom */
+    width: 100%;
+    padding: 10px 15px;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-form-section h2 {
+    color: #e4002b;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left; /* Align form labels/inputs to left */
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: #e4002b; /* KFC Red on focus */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    width: auto; /* Button auto width, not full width */
+    padding: 12px 30px;
+    font-size: 1.1em;
+    float: right; /* Align button to the right */
+}
+
+/* Responsive adjustments for Contact Us Page */
+@media (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.5em;
+    }
+    .contact-hero p {
+        font-size: 1em;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 0 15px;
+    }
+    .detail-card {
+        max-width: 400px; /* Limit width of single column cards */
+        margin: 0 auto; /* Center single cards */
+    }
+
+    .contact-form {
+        padding: 25px; /* Reduce padding on smaller screens */
+        max-width: 90%; /* Make form narrower */
+    }
+
+    .contact-form .btn-primary {
+        width: 100%; /* Make button full width on small screens */
+        float: none; /* Remove float */
+    }
+}
