@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Menu - Explore Our Finger Lickin' Good Selection!</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="menu-page">
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="kfc logo.png" alt="KFC Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#" class="cart-icon">🛒 <span class="cart-count">0</span></a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="menu-hero">
+            <div class="container">
+                <h1>Our Delicious Menu</h1>
+                <p>Explore a wide range of KFC classics and new favorites.</p>
+            </div>
+        </section>
+
+        <section class="menu-sections">
+            <div class="container">
+                <div class="category-navigation">
+                    <button class="category-btn active" data-category="all">All Items</button>
+                    <button class="category-btn" data-category="buckets">Buckets</button>
+                    <button class="category-btn" data-category="burgers">Burgers & Wraps</button>
+                    <button class="category-btn" data-category="snacks">Snacks & Sides</button>
+                    <button class="category-btn" data-category="drinks">Drinks</button>
+                    <button class="category-btn" data-category="desserts">Desserts</button>
+                    <button class="category-btn" data-category="combos">Combos</button>
+                </div>
+
+                <div class="search-bar-container">
+                    <input type="text" id="menuSearch" placeholder="Search menu items...">
+                    <button id="searchBtn">Search</button>
+                </div>
+
+                <div class="menu-items-grid">
+                    <div class="menu-item-card" data-category="buckets">
+                        <img src="12 Pc Chicken Bucket.jpg" alt="12 Pc Chicken Bucket">
+                        <h3>12 Pc Chicken Bucket</h3>
+                        <p>Our signature fried chicken, perfect for a big gathering.</p>
+                        <span class="price">PKR 2200</span>
+                        <button class="btn btn-add-to-cart" data-item-id="12pc-bucket">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="burgers">
+                        <img src="zinger-burger.jpeg" alt="Zinger Burger">
+                        <h3>Zinger Burger</h3>
+                        <p>The original crispy chicken fillet, lettuce, and mayo.</p>
+                        <span class="price">PKR 550</span>
+                        <button class="btn btn-add-to-cart" data-item-id="zinger-burger-menu">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="snacks">
+                        <img src="KFC Fries.png" alt="KFC Fries">
+                        <h3>KFC Fries</h3>
+                        <p>Golden, crispy, and perfectly salted fries.</p>
+                        <span class="price">PKR 250</span>
+                        <button class="btn btn-add-to-cart" data-item-id="kfc-fries-menu">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="drinks">
+                        <img src="Pepsi 1.5L.jpg" alt="Pepsi 1.5L">
+                        <h3>Pepsi 1.5L</h3>
+                        <p>Refreshing Pepsi to complete your meal.</p>
+                        <span class="price">PKR 200</span>
+                        <button class="btn btn-add-to-cart" data-item-id="pepsi-1.5l">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="desserts">
+                        <img src="Chocolate Brownie.jpg" alt="Chocolate Brownie">
+                        <h3>Chocolate Brownie</h3>
+                        <p>Rich and fudgy chocolate brownie.</p>
+                        <span class="price">PKR 180</span>
+                        <button class="btn btn-add-to-cart" data-item-id="chocolate-brownie">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="combos">
+                        <img src="Mighty Zinger Box.jpg" alt="Zinger Box">
+                        <h3>Zinger Box</h3>
+                        <p>Zinger Burger, 1 pc Chicken, Fries, Drink & Coleslaw.</p>
+                        <span class="price">PKR 1099</span>
+                        <button class="btn btn-add-to-cart" data-item-id="zinger-box">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="buckets">
+                        <img src="Family Feast Deal.webp" alt="Family Bucket">
+                        <h3>Family Bucket</h3>
+                        <p>8 Pcs Chicken, 2 Zinger Burgers, Fries & 1.5L Drink.</p>
+                        <span class="price">PKR 2800</span>
+                        <button class="btn btn-add-to-cart" data-item-id="family-bucket">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="burgers">
+                        <img src="Twister Wrap.jpg" alt="Twister Wrap">
+                        <h3>Twister Wrap</h3>
+                        <p>Crispy chicken strips, fresh veggies, and sauce in a wrap.</p>
+                        <span class="price">PKR 450</span>
+                        <button class="btn btn-add-to-cart" data-item-id="twister-wrap">Add to Cart</button>
+                    </div>
+
+                    <div class="menu-item-card" data-category="snacks">
+                        <img src="Coleslaw.jpg" alt="Coleslaw">
+                        <h3>Coleslaw</h3>
+                        <p>Creamy and refreshing coleslaw side.</p>
+                        <span class="price">PKR 120</span>
+                        <button class="btn btn-add-to-cart" data-item-id="coleslaw">Add to Cart</button>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="kfc logo.png" alt="KFC Logo"></a>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="deals.html">Deals</a></li>
+                        <li><a href="store-locator.html">Store Locator</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <a href="#" target="_blank"><img src="facebook icon.webp" alt="Facebook"></a>
+                    <a href="#" target="_blank"><img src="Instagram  icon.webp" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="Twitter icon.png" alt="Twitter"></a>
+                </div>
+            </div>
+        
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
